@@ -14,11 +14,12 @@ public class main {
         return array;
     }
     static double average(int[] array){
+
         double sum=0;
         for (int i:array){
-            sum +=i;
+            sum +=1.0/i;
         }
-        sum /=array.length;
+        sum = array.length / sum;
         return sum;
     }
 
@@ -30,7 +31,7 @@ public class main {
         boundary=input.nextInt();
         int[] array = new int[boundary];
         addItem(array);
-        System.out.println("Ortalama : "+ average(array));
+        System.out.println("Harmonik Ortalama : "+ average(array));
         System.out.println(Arrays.toString(array));
 
 
